@@ -619,3 +619,114 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(counterSection);
 });
+
+
+
+// ========================================
+// BRij VILLA PAGE LOADER
+// ========================================
+
+(function () {
+
+    const loader = document.getElementById("page-loader");
+    const video = document.getElementById("loader-video");
+
+    if (!loader) {
+        console.log("Page loader not found");
+        return;
+    }
+
+    console.log("Brij Villa loader started");
+
+    // Play video
+    if (video) {
+        video.muted = true;
+
+        const playVideo = () => {
+            video.play().catch(error => {
+                console.log("Video autoplay blocked:", error);
+            });
+        };
+
+        playVideo();
+    }
+
+    // Hide loader
+    function hideLoader() {
+        setTimeout(() => {
+            loader.classList.add("hide");
+            console.log("Loader hidden");
+        }, 700);
+    }
+
+    // Page already loaded
+    if (document.readyState === "complete") {
+        hideLoader();
+    } else {
+        window.addEventListener("load", hideLoader);
+    }
+
+    // ========================================
+    // SHOW LOADER BEFORE INTERNAL PAGE CHANGE
+    // ========================================
+
+    document.addEventListener("click", function (event) {
+
+        const link = event.target.closest("a");
+
+        if (!link) return;
+
+        const href = link.getAttribute("href");
+
+        if (!href) return;
+
+        // Ignore these
+        if (
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:") ||
+            href.startsWith("javascript:")
+        ) {
+            return;
+        }
+
+        // Ignore external websites
+        if (
+            link.hostname &&
+            link.hostname !== window.location.hostname
+        ) {
+            return;
+        }
+
+        // Ignore new tab
+        if (link.target === "_blank") return;
+
+        // Don't reload same page
+        if (
+            link.href === window.location.href ||
+            href === ""
+        ) {
+            return;
+        }
+
+        event.preventDefault();
+
+        console.log("Loading next page:", href);
+
+        // Show loader
+        loader.classList.remove("hide");
+
+        // Restart video
+        if (video) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        }
+
+        // Navigate
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 300);
+
+    });
+
+})();

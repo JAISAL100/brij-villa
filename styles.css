@@ -4464,3 +4464,190 @@ nav,
     color: #1877F2;
     border-color: rgba(24, 119, 242, 0.35);
 }
+
+
+
+
+/* =========================
+   BRij VILLA PAGE LOADER
+========================= */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #000;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#page-loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Video */
+#loader-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Dark cinematic overlay */
+.loader-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.38);
+
+    z-index: 1;
+}
+
+/* Center content */
+.loader-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    animation: loaderIn 1s ease forwards;
+}
+
+/* Logo */
+.loader-logo {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+    filter: drop-shadow(0 4px 15px rgba(0,0,0,.5));
+}
+
+/* Brand */
+.loader-brand {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+    letter-spacing: 7px;
+
+    color: #e5c276;
+
+    margin-left: 7px;
+}
+
+/* Line */
+.loader-line {
+    width: 55px;
+    height: 1px;
+
+    background: #e5c276;
+
+    margin: 14px 0;
+}
+
+/* Tagline */
+.loader-content p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 1px;
+
+    color: rgba(255,255,255,.9);
+}
+
+/* Loading dots */
+.loader-dots {
+    display: flex;
+    gap: 6px;
+
+    margin-top: 22px;
+}
+
+.loader-dots span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #e5c276;
+
+    animation: loaderDot 1.3s infinite ease-in-out;
+}
+
+.loader-dots span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.loader-dots span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes loaderDot {
+    0%, 80%, 100% {
+        opacity: .25;
+        transform: scale(.8);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes loaderIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .loader-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .loader-brand {
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    .loader-content p {
+        font-size: 14px;
+        padding: 0 25px;
+    }
+}

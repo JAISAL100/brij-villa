@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Brij Vila Jaisalmer</title>
+  
+  <!-- Shared Global CSS (Navbar, Footer, Buttons) -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Page Specific CSS -->
+  <link rel="stylesheet" href="about.css">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar (Shared Multi-Page Nav) -->
+  <header class="navbar">
+        <a href="#hero" class="nav-logo">
+  <img 
+    src="./images/88f17f92-57b8-442e-8bf9-5949bb6d2c0f-removebg-preview.png" 
+    alt="Brij Villa Logo" 
+    class="nav-logo-img" 
+  />
+  <div class="logo-text-group">
+    <span class="logo-main">Brij Villa</span>
+  </div>
+</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="rooms.html">Rooms & Services</a>
+      <a href="explore.html">Explore Jaisalmer</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn-primary">BOOK NOW</a>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-mobile" id="mobileNav">
+    <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+    <a href="index.html" class="mob-link">Home</a>
+    <a href="about.html" class="mob-link">About Us</a>
+    <a href="rooms.html" class="mob-link">Rooms & Services</a>
+    <a href="explore.html" class="mob-link">Explore Jaisalmer</a>
+    <a href="gallery.html" class="mob-link">Gallery</a>
+    <a href="contact.html" class="mob-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="about-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="gold-subtitle">Our Heritage & Legacy</span>
+        <h1>Where Thar's Warmth Meets Eternal Grandeur</h1>
+        <p>A sanctuary crafted from Jaisalmer's yellow sandstone, built to turn quiet desert stays into everlasting stories.</p>
+      </div>
+    </section>
+
+    <!-- Narrative Intro Section (Split Layout) -->
+  <section class="about-story container">
+  <div class="story-grid">
+    <div class="story-images">
+      <!-- Main Video replaces the main background image -->
+      <div class="img-wrapper main-img video-wrapper">
+  <img 
+    src="./images/hotelfront.png" 
+    alt="Brij Villa Hotel"
+  >
+</div>
+    </div>
+
+    <div class="story-text">
+      <span class="section-label">The Soul of Brij Villa</span>
+      
+      <h2>A Timeless Stay Crafted for Comfort & Connection</h2>
+      
+      <p class="lead-text">
+        Brij Villa is a thoughtfully designed retreat where traditional Rajasthani charm meets modern comfort. Every corner of the villa reflects a warm sense of heritage, creating a peaceful and welcoming atmosphere for every guest.
+      </p>
+      
+      <p>
+        From beautifully crafted spaces and comfortable rooms to warm hospitality and personalized service, we believe a memorable stay is all about the little details. Whether you're here to relax, reconnect with loved ones, or simply enjoy a peaceful escape, Brij Villa offers a stay that feels both luxurious and like home.
+      </p>
+
+      <div class="story-quote">
+        <blockquote>
+          "We didn't just create a place to stay; we created a space where every guest feels welcomed, relaxed, and truly at home."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Pillars / Services Section -->
+<!-- <section class="about-pillars brij-experiences" id="brij-experiences">
+  <div class="container">
+    <div class="section-header text-center brij-experiences-header">
+      <span class="section-label">The Brij Experience</span>
+      <h2>Curated Experiences of the Thar</h2>
+      <div class="header-line"></div>
+      <p class="brij-experiences-intro">Handpicked desert journeys and royal conveniences, arranged with the quiet precision of a heritage concierge.</p>
+    </div>
+
+    <div class="brij-experiences-grid">
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/samsdunes.jpg" alt="Desert Safari across golden Sam Sand Dunes" loading="lazy">
+          <span class="experience-card-num">01</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Desert Adventure</span>
+          <h3>Desert Safari</h3>
+          <p>Golden-hour journeys into the Sam dunes — sunset vistas, soft sand trails, and the hush of the Thar at twilight.</p>
+          <button type="button" class="experience-book-btn" data-service="Desert Safari">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/jeep.jpg" alt="Jeep Safari through desert dunes" loading="lazy">
+          <span class="experience-card-num">02</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Off-Road Expedition</span>
+          <h3>Jeep Safari</h3>
+          <p>Private 4×4 expeditions across rolling dunes and desert tracks — spirited, secure, and entirely on your schedule.</p>
+          <button type="button" class="experience-book-btn" data-service="Jeep Safari">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/camel.jpg" alt="Camel Safari at sunset in the Thar Desert" loading="lazy">
+          <span class="experience-card-num">03</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Traditional Desert</span>
+          <h3>Camel Safari</h3>
+          <p>Leisurely camel treks along ancient caravan routes — a timeless Marwari ritual beneath wide desert skies.</p>
+          <button type="button" class="experience-book-btn" data-service="Camel Safari">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/quad.jpg" alt="Quad biking across desert terrain" loading="lazy">
+          <span class="experience-card-num">04</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Adventure Sports</span>
+          <h3>Quad Biking</h3>
+          <p>Guided quad rides through open desert terrain — spirited exploration with safety briefing and equipment included.</p>
+          <button type="button" class="experience-book-btn" data-service="Quad Biking">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/camp.jpg" alt="Luxury desert camping beneath desert skies" loading="lazy">
+          <span class="experience-card-num">05</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Overnight Escape</span>
+          <h3>Desert Camping</h3>
+          <p>Curated overnight camps with starlit dining, bonfire warmth, and the serene solitude of the golden wilderness.</p>
+          <button type="button" class="experience-book-btn" data-service="Desert Camping">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/folk.jpg" alt="Rajasthani cultural and folk heritage" loading="lazy">
+          <span class="experience-card-num">06</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Heritage &amp; Culture</span>
+          <h3>Rajasthani Cultural &amp; Folk Experience</h3>
+          <p>Evenings of folk music, Kalbelia dance, and Marwari storytelling — an intimate portrait of royal Rajasthan.</p>
+          <button type="button" class="experience-book-btn" data-service="Rajasthani Cultural &amp; Folk Experience">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/jaisalmerfort.jpg" alt="Jaisalmer Fort and guided heritage tours" loading="lazy">
+          <span class="experience-card-num">07</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Guided Discovery</span>
+          <h3>Jaisalmer Sightseeing &amp; Guided Tours</h3>
+          <p>Certified local guides unveil Sonar Qila, havelis, and hidden lanes — history told with grace and depth.</p>
+          <button type="button" class="experience-book-btn" data-service="Jaisalmer Sightseeing &amp; Guided Tours">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+   
+
+      <article class="experience-card">
+        <div class="experience-card-media">
+          <img src="./images/car.jpg" alt="Private taxi and car rental in Jaisalmer" loading="lazy">
+          <span class="experience-card-num">08</span>
+        </div>
+        <div class="experience-card-body">
+          <span class="experience-card-cat">Private Transport</span>
+          <h3>Private Taxi &amp; Car Rental</h3>
+          <p>Premium chauffeur-driven cars and self-drive options for day trips, city errands, and bespoke itineraries.</p>
+          <button type="button" class="experience-book-btn" data-service="Private Taxi &amp; Car Rental">
+            Book Now <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section> -->
+
+<!-- Key Statistics Banner -->
+<section class="about-stats">
+  <div class="container stats-flex">
+    
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Hand-Carved Sandstone</span>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+      <span class="stat-number">4.9 ★</span>
+      <span class="stat-label">Excellence Rating</span>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+      <span class="stat-number">24/7</span>
+      <span class="stat-label">Bespoke Concierge</span>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+      <span class="stat-number">360°</span>
+      <span class="stat-label">Thar & Fort Vistas</span>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Call to Action Banner -->
+    <section class="about-cta">
+  <div class="cta-card container">
+    <div class="cta-content">
+      <span class="cta-subtitle">Begin Your Royal Journey</span>
+      <h2>Ready to Experience Golden Hospitality?</h2>
+      <p>Book your sanctuary amidst the dunes or connect with our concierge for a bespoke luxury itinerary.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="rooms.html" class="btn-primary">Explore Accommodations</a>
+      <a href="contact.html" class="btn-outline">Plan Your Experience</a>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <!-- Brand Info Column -->
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-main">Hotel Brij Villa</span>
+          </a>
+          <p class="footer-tagline">
+            A luxury sanctuary crafted from Jaisalmer’s iconic golden sandstone. Experience timeless royal hospitality in the heart of the Thar Desert.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/brijvilla_jaisalmer?igsh=MWw5ZTd3NH1va2M3cA==" class="social-btn contact-app-link" data-contact="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918769878788" class="social-btn contact-app-link" data-contact="whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1Bj2ftABbc/" class="social-btn contact-app-link" data-contact="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Column 1 -->
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="explore.html">Explore Jaisalmer</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Column 2 -->
+        <div class="footer-col">
+          <h5>Experience</h5>
+          <ul>
+            <li><a href="rooms.html">Royal Suites</a></li>
+            <li><a href="explore.html">Desert Safari</a></li>
+            <li><a href="about.html">Our Heritage</a></li>
+            <li><a href="contact.html">Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info Column -->
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 3px;"></i>
+            <span>Back Side Bhatia Mukti Dham, Near Parihar Hospital, Geeta Ashram Road, Jaisalmer, Rajasthan - 345001</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone" style="margin-top: 3px;"></i>
+            <a href="tel:+918769878788">+91 8769878788</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope" style="margin-top: 3px;"></i>
+            <a href="mailto:brijvillajaisalmer@gmail.com" class="contact-app-link" data-contact="email">brijvillajaisalmer@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hotel Brij Villa Jaisalmer. All Rights Reserved.</p>
+        <div class="footer-links">
+         <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./cancellation-policy.html">Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="contact-links.js" defer></script>
+  <script src="about-experiences.js" defer></script>
+  <script src="mobile-nav.js" defer></script>
+</body>
+</html>

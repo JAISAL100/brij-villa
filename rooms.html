@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms & Suites | Brij Vila Jaisalmer</title>
+  
+  <!-- Shared Global CSS (Navbar, Footer, Buttons) -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Page Specific CSS -->
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="rooms.css">
+  <!-- <link rel="stylesheet" href="./css/about.css"> -->
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar (Shared Multi-Page Nav) -->
+  <header class="navbar">
+         <a href="#hero" class="nav-logo">
+  <img 
+    src="./images/88f17f92-57b8-442e-8bf9-5949bb6d2c0f-removebg-preview.png" 
+    alt="Brij Villa Logo" 
+    class="nav-logo-img" 
+  />
+  <div class="logo-text-group">
+    <span class="logo-main">Brij Villa</span>
+  </div>
+</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="rooms.html" class="active">Rooms & Services</a>
+      <a href="explore.html">Explore Jaisalmer</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn-primary">BOOK NOW</a>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-mobile" id="mobileNav">
+    <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+    <a href="index.html" class="mob-link">Home</a>
+    <a href="about.html" class="mob-link">About Us</a>
+    <a href="rooms.html" class="mob-link">Rooms & Services</a>
+    <a href="explore.html" class="mob-link">Explore Jaisalmer</a>
+    <a href="gallery.html" class="mob-link">Gallery</a>
+    <a href="contact.html" class="mob-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="about-hero rooms-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="gold-subtitle">Royal Accommodations</span>
+        <h1>Sanctuaries of Golden Comfort</h1>
+        <p>Carved from native sandstone and adorned with handcrafted Rajasthani elements—offering unmatched peace amidst the desert.</p>
+      </div>
+    </section>
+
+    <!-- Rooms Showcase Section -->
+    <section class="rooms-section container">
+      
+      <!-- 1. DELUXE ROOM -->
+      <article class="room-card" id="deluxe-room">
+        <!-- Image Slider Container -->
+        <div class="room-slider" data-slider="deluxe">
+          <div class="slider-track">
+            <div class="slide active">
+              <img src="./images/delux.jpeg" alt="Deluxe Room Main View">
+            </div>
+            <div class="slide">
+              <img src="./images/deluxe.jpeg" alt="Deluxe Room Interiors">
+            </div>
+            <div class="slide">
+              <img src="./images/deluxebath.jpeg" alt="Deluxe Room Bathroom Detail">
+            </div>
+          </div>
+          
+          <!-- Slider Navigation Arrows -->
+          <button class="slider-btn prev" onclick="moveSlide('deluxe', -1)" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next" onclick="moveSlide('deluxe', 1)" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Slider Dots -->
+          <div class="slider-dots">
+            <span class="dot active" onclick="setSlide('deluxe', 0)"></span>
+            <span class="dot" onclick="setSlide('deluxe', 1)"></span>
+            <span class="dot" onclick="setSlide('deluxe', 2)"></span>
+          </div>
+
+          <span class="room-category-tag">Heritage Stay</span>
+        </div>
+
+        <!-- Room Content Info -->
+        <div class="room-details">
+          <span class="section-label">01 / Classic Elegance</span>
+          <h2>Deluxe Heritage Room</h2>
+          <p class="room-desc">
+            Thoughtfully engineered for modern travelers seeking authentic desert warmth. Featuring hand-carved stone archways, cozy warm LED ambient lighting, and rich Marwari textile accents.
+          </p>
+
+          <div class="room-specs">
+            <div class="spec-item"><i class="fa-solid fa-maximize"></i> 380 Sq. Ft</div>
+            <div class="spec-item"><i class="fa-solid fa-bed"></i> King Size Bed</div>
+            <div class="spec-item"><i class="fa-solid fa-users"></i> Up to 2 Guests</div>
+            <div class="spec-item"><i class="fa-solid fa-mountain-sun"></i> Courtyard View</div>
+          </div>
+
+          <div class="room-features-list">
+            <span><i class="fa-solid fa-check"></i> High-Speed Wi-Fi</span>
+            <span><i class="fa-solid fa-check"></i> Air Conditioning</span>
+            <span><i class="fa-solid fa-check"></i> 24/7 Hot Water</span>
+            <span><i class="fa-solid fa-check"></i> Tea & Coffee Maker</span>
+            <span><i class="fa-solid fa-check"></i> Organic Toiletries</span>
+          </div>
+
+          <div class="room-pricing-bar">
+            <div class="price-box">
+              <span class="price-label">Rates & Availability</span>
+              <span class="price-amount">Upon Request</span>
+            </div>
+            <a href="contact.html?room=deluxe" class="btn-primary">Book / Inquire Deluxe</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. SUPER DELUXE ROOM -->
+      <article class="room-card reverse" id="super-deluxe-room">
+        <!-- Image Slider Container -->
+        <div class="room-slider" data-slider="super-deluxe">
+          <div class="slider-track">
+            <div class="slide active">
+              <img src="./images/superdelux.png">
+            </div>
+            <div class="slide">
+              <img src="./images/376b0189-cbac-4f1a-8d41-93de6c979342.jpeg" alt="Super Deluxe Sitting Jharokha Area">
+            </div>
+            <div class="slide">
+              <img src="./images/superdbath.jpeg" alt="Super Deluxe Private Balcony View">
+            </div>
+          </div>
+
+          <!-- Slider Navigation Arrows -->
+          <button class="slider-btn prev" onclick="moveSlide('super-deluxe', -1)" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next" onclick="moveSlide('super-deluxe', 1)" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Slider Dots -->
+          <div class="slider-dots">
+            <span class="dot active" onclick="setSlide('super-deluxe', 0)"></span>
+            <span class="dot" onclick="setSlide('super-deluxe', 1)"></span>
+            <span class="dot" onclick="setSlide('super-deluxe', 2)"></span>
+          </div>
+
+          <span class="room-category-tag premium">Royal Luxury</span>
+        </div>
+
+        <!-- Room Content Info -->
+        <div class="room-details">
+          <span class="section-label">02 / Grand Living</span>
+          <h2>Super Deluxe Royal Suite</h2>
+          <p class="room-desc">
+            An expansive suite designed for supreme luxury. Highlights include a private carved sandstone <em>Jharokha</em> (balcony) with unobstructed views of the sunset and Jaisalmer Fort, premium memory-foam bedding, and personal room service.
+          </p>
+
+          <div class="room-specs">
+            <div class="spec-item"><i class="fa-solid fa-maximize"></i> 550 Sq. Ft</div>
+            <div class="spec-item"><i class="fa-solid fa-bed"></i> Super King Bed</div>
+            <div class="spec-item"><i class="fa-solid fa-users"></i> Up to 3 Guests</div>
+            <div class="spec-item"><i class="fa-solid fa-chess-king"></i> Fort & Dune View</div>
+          </div>
+
+          <div class="room-features-list">
+            <span><i class="fa-solid fa-check"></i> Private Jharokha Balcony</span>
+            <span><i class="fa-solid fa-check"></i> Express Room Service</span>
+            <span><i class="fa-solid fa-check"></i> Minibar & Refreshments</span>
+            <span><i class="fa-solid fa-check"></i> Smart LED TV</span>
+            <span><i class="fa-solid fa-check"></i> Heritage Lounge Chairs</span>
+          </div>
+
+          <div class="room-pricing-bar">
+            <div class="price-box">
+              <span class="price-label">Rates & Availability</span>
+              <span class="price-amount">Upon Request</span>
+            </div>
+            <a href="contact.html?room=super-deluxe" class="btn-primary">Book / Inquire Suite</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+   <section class="hotel-services" id="hotel-services">
+  <div class="container">
+
+    <div class="hotel-services-header">
+      <span class="section-label">Beyond Your Stay</span>
+      <h2>Experiences Curated by Brij Villa</h2>
+      <div class="header-line"></div>
+      <p>
+        Discover memorable experiences and convenient services, thoughtfully
+        arranged to make your stay at Brij Villa truly effortless.
+      </p>
+    </div>
+
+
+    <!-- 01 Camel Safari -->
+    <article class="hotel-service-row">
+      <div class="service-slider">
+        <div class="service-slides">
+
+          <img src="./images/camel.jpg"
+               alt="Camel Safari experience"
+               class="service-slide active">
+
+          <img src="./images/camel1.jpeg"
+               alt="Camel Safari in the desert"
+               class="service-slide">
+
+          <img src="./images/camel2.jpeg"
+               alt="Camel ride at sunset"
+               class="service-slide">
+
+        </div>
+
+        <button class="slider-arrow slider-prev" type="button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="slider-arrow slider-next" type="button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <span class="service-number">01</span>
+      </div>
+
+      <div class="hotel-service-content">
+        <span class="service-category">Desert Experience</span>
+
+        <h3>Camel Safari</h3>
+
+        <p>
+          Experience the timeless charm of the desert on a traditional camel
+          safari. Ride through the golden dunes, enjoy the peaceful landscape
+          and witness the beauty of the desert as the sun begins to set.
+        </p>
+
+        <p>
+          Our team can arrange a comfortable and memorable camel safari
+          experience according to your preferred timing.
+        </p>
+
+        <button class="service-book-btn"
+                type="button"
+                data-service="Camel Safari">
+          Book Camel Safari
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+
+    <!-- 02 Jeep Safari -->
+    <article class="hotel-service-row reverse">
+      <div class="service-slider">
+        <div class="service-slides">
+
+          <img src="./images/jeep.jpg"
+               alt="Jeep Safari experience"
+               class="service-slide active">
+
+          <img src="./images/jeep1.jpeg"
+               alt="Jeep driving through desert dunes"
+               class="service-slide">
+
+          <img src="./images/jeep2.jpeg"
+               alt="Desert jeep adventure"
+               class="service-slide">
+
+        </div>
+
+        <button class="slider-arrow slider-prev" type="button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="slider-arrow slider-next" type="button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <span class="service-number">02</span>
+      </div>
+
+      <div class="hotel-service-content">
+        <span class="service-category">Desert Adventure</span>
+
+        <h3>Jeep Safari</h3>
+
+        <p>
+          Add a little adventure to your stay with an exciting jeep safari
+          across the desert. Explore the dunes, discover scenic viewpoints
+          and enjoy the thrill of travelling through the open desert landscape.
+        </p>
+
+        <p>
+          Jeep safari experiences can be arranged privately for couples,
+          families and groups.
+        </p>
+
+        <button class="service-book-btn"
+                type="button"
+                data-service="Jeep Safari">
+          Book Jeep Safari
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+
+    <!-- 03 Taxi Booking -->
+    <article class="hotel-service-row">
+      <div class="service-slider">
+        <div class="service-slides">
+
+          <img src="./images/car.jpg"
+               alt="Private taxi service"
+               class="service-slide active">
+
+          <img src="./images/car1.jpg"
+               alt="Private car booking"
+               class="service-slide">
+
+          <img src="./images/car2.jpg"
+               alt="Comfortable private transportation"
+               class="service-slide">
+
+        </div>
+
+        <button class="slider-arrow slider-prev" type="button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="slider-arrow slider-next" type="button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <span class="service-number">03</span>
+      </div>
+
+      <div class="hotel-service-content">
+        <span class="service-category">Private Transportation</span>
+
+        <h3>Taxi Booking</h3>
+
+        <p>
+          Travel around Jaisalmer comfortably with our convenient private taxi
+          service. Whether you need airport transfers, local transportation
+          or a car for exploring the city, we can arrange it for you.
+        </p>
+
+        <p>
+          Enjoy reliable transportation with comfortable vehicles and
+          professional drivers throughout your stay.
+        </p>
+
+        <button class="service-book-btn"
+                type="button"
+                data-service="Taxi Booking">
+          Book a Taxi
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+
+    <!-- 04 Desert Camp -->
+    <article class="hotel-service-row reverse">
+      <div class="service-slider">
+        <div class="service-slides">
+
+          <img src="./images/camping3.jpeg"
+               alt="Luxury desert camp"
+               class="service-slide active">
+
+          <img src="./images/camping1.jpeg"
+               alt="Desert camp evening"
+               class="service-slide">
+
+          <img src="./images/camping2.jpeg"
+               alt="Desert camp under the stars"
+               class="service-slide">
+
+        </div>
+
+        <button class="slider-arrow slider-prev" type="button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="slider-arrow slider-next" type="button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <span class="service-number">04</span>
+      </div>
+
+      <div class="hotel-service-content">
+        <span class="service-category">Desert Escape</span>
+
+        <h3>Desert Camp Booking</h3>
+
+        <p>
+          Turn your desert visit into an unforgettable overnight experience.
+          Stay beneath the open sky, enjoy the peaceful surroundings and
+          experience the warmth of traditional desert hospitality.
+        </p>
+
+        <p>
+          We can help arrange your preferred desert camp experience with
+          comfortable accommodation and memorable evening experiences.
+        </p>
+
+        <button class="service-book-btn"
+                type="button"
+                data-service="Desert Camp Booking">
+          Book Desert Camp
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- Inclusion Highlights -->
+    <section class="inclusions-banner">
+      <div class="container text-center">
+        <span class="section-label">Included With Every Booking</span>
+        <h2>The Royal Service Promise</h2>
+        <div class="inclusions-grid">
+         <div class="inc-item">
+  <i class="fa-solid fa-bed"></i>
+  <h4>Comfortable Stay</h4>
+  <p>Thoughtfully designed rooms with a peaceful atmosphere and modern comforts.</p>
+</div>
+          <div class="inc-item">
+            <i class="fa-solid fa-wifi"></i>
+            <h4>High-Speed Optical Wi-Fi</h4>
+            <p>Stay connected with reliable fiber internet across all areas.</p>
+          </div>
+          <div class="inc-item">
+            <i class="fa-solid fa-car"></i>
+            <h4>Desert Transit Assistance</h4>
+            <p>Seamless pick-up & drop arrangements upon request.</p>
+          </div>
+          <div class="inc-item">
+            <i class="fa-solid fa-clock"></i>
+            <h4>24-Hour Concierge</h4>
+            <p>Dedicated staff to arrange local tours and safaris.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-main">Hotel Brij Villa</span>
+          </a>
+          <p class="footer-tagline">
+            A luxury sanctuary crafted from Jaisalmer’s iconic golden sandstone. Experience timeless royal hospitality in the heart of the Thar Desert.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/brijvilla_jaisalmer?igsh=MWw5ZTd3NH1va2M3cA==" class="social-btn contact-app-link" data-contact="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918769878788" class="social-btn contact-app-link" data-contact="whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1Bj2ftABbc/" class="social-btn contact-app-link" data-contact="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="explore.html">Explore Jaisalmer</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Experience</h5>
+          <ul>
+            <li><a href="rooms.html#deluxe-room">Deluxe Room</a></li>
+            <li><a href="rooms.html#super-deluxe-room">Super Deluxe Suite</a></li>
+            <li><a href="explore.html">Desert Safari</a></li>
+            <li><a href="contact.html">Reservations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 3px;"></i>
+            <span>Back Side Bhatia Mukti Dham, Near Parihar Hospital, Geeta Ashram Road, Jaisalmer, Rajasthan - 345001</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone" style="margin-top: 3px;"></i>
+            <a href="tel:+918769878788">+91 8769878788</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope" style="margin-top: 3px;"></i>
+            <a href="mailto:brijvillajaisalmer@gmail.com" class="contact-app-link" data-contact="email">brijvillajaisalmer@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hotel Brij Villa Jaisalmer. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./cancellation-policy.html">Cancellation Policy</a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+document.querySelectorAll(".service-slider").forEach((slider) => {
+
+  const slides = slider.querySelectorAll(".service-slide");
+  const dots = slider.querySelectorAll(".slider-dot");
+  const prevBtn = slider.querySelector(".slider-prev");
+  const nextBtn = slider.querySelector(".slider-next");
+
+  let currentIndex = 0;
+  let autoSlide;
+
+  function showSlide(index) {
+
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentIndex);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 4500);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      resetAutoSlide();
+    });
+  });
+
+  showSlide(0);
+  startAutoSlide();
+
+});
+</script>
+
+  <!-- Slider Functionality JavaScript -->
+  <script>
+    const sliderStates = {
+      'deluxe': 0,
+      'super-deluxe': 0
+    };
+
+    function updateSlider(sliderKey) {
+      const sliderEl = document.querySelector(`[data-slider="${sliderKey}"]`);
+      if (!sliderEl) return;
+
+      const slides = sliderEl.querySelectorAll('.slide');
+      const dots = sliderEl.querySelectorAll('.dot');
+      const index = sliderStates[sliderKey];
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    function moveSlide(sliderKey, direction) {
+      const sliderEl = document.querySelector(`[data-slider="${sliderKey}"]`);
+      if (!sliderEl) return;
+
+      const totalSlides = sliderEl.querySelectorAll('.slide').length;
+      let currentIndex = sliderStates[sliderKey] + direction;
+
+      if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+      } else if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+      }
+
+      sliderStates[sliderKey] = currentIndex;
+      updateSlider(sliderKey);
+    }
+
+    function setSlide(sliderKey, slideIndex) {
+      sliderStates[sliderKey] = slideIndex;
+      updateSlider(sliderKey);
+    }
+  </script>
+  <script src="contact-links.js" defer></script>
+  <script src="mobile-nav.js" defer></script>
+</body>
+</html>

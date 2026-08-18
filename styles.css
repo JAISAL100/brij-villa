@@ -3223,6 +3223,15 @@ footer {
     max-width: 1300px;
     margin: 0 auto;
 }
+.footer-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
 
 .footer-top {
     display: grid;

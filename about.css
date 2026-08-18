@@ -1303,3 +1303,16 @@ footer .logo-sub {
     line-height: 1.75;
   }
 }
+
+.footer-brand-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand-title .footer-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+} 
